@@ -1,86 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>
-		CARRIER VICIDIAL
-	</title>
-
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="js/jquery-3.3.1.min.js"></script>
-
-<script src="js/jquery-3.4.1.js"></script>
-<!--<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>-->
-<script src="bootstrap-4.3.1/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-
-<script src="alertifyjs/alertify.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.min.css">
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.min.css">
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/bootstrap.min.css">
-
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.rtl.min.css">
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.rtl.min.css">
-
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/semantic.rtl.min.css">
-
-<link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/bootstrap.rtl.min.css">
-
-
-
-
-</head>
-<body>
-	<script >
-		function prefijoAutomaticol5() {
-
-        //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
-
-        var time2 = $.ajax({
-
-            url: 'prefijosServerAuto5.php', //indicamos la ruta donde se genera la hora
-                dataType: 'text',//indicamos que es de tipo texto plano
-                async: false     //ponemos el parámetro asyn a falso
-        }).responseText;
-
-        //actualizamos el div que nos mostrará la hora actual
-        document.getElementById("auto_5").innerHTML =time2;
-    }
+    <head>
+        <title>
+	       CARRIER VICIDIAL
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Script -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="bootstrap-4.3.1/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <script src="alertifyjs/alertify.min.js"></script>
+        <!-- Estilos -->
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/alertify.rtl.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/default.rtl.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/semantic.rtl.min.css">
+        <link rel="stylesheet" type="text/css" href="alertifyjs/css/themes/bootstrap.rtl.min.css">
+    </head>
+    <body>
+        <script>
+            function prefijoAutomaticol5() {
+            //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
+                var time2 = $.ajax({
+                    url: 'prefijosServerAuto5.php', //indicamos la ruta donde se genera la hora
+                    dataType: 'text',//indicamos que es de tipo texto plano
+                    async: false     //ponemos el parámetro asyn a falso
+                }).responseText;
+                //actualizamos el div que nos mostrará la hora actual
+                document.getElementById("auto_5").innerHTML =time2;
+            }
 	
- function prefijoManual5() {
+            function prefijoManual5() {
+            //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
+                var time2 = $.ajax({
+                    url: 'prefijosServerManual5.php', //indicamos la ruta donde se genera la hora
+                    dataType: 'text',//indicamos que es de tipo texto plano
+                    async: false     //ponemos el parámetro asyn a falso
+                }).responseText;
+                //actualizamos el div que nos mostrará la hora actual
+                document.getElementById("Manual_5").innerHTML =time2;
+            }
 
-        //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
+            function prefijoAutomaticol6() {
+            //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
+                var time2 = $.ajax({
+                    url: 'prefijosServerAuto6.php', //indicamos la ruta donde se genera la hora
+                    dataType: 'text',//indicamos que es de tipo texto plano
+                    async: false     //ponemos el parámetro asyn a falso
+                }).responseText;
+                //actualizamos el div que nos mostrará la hora actual
+                document.getElementById("auto_6").innerHTML =time2;
+            }
 
-        var time2 = $.ajax({
-
-            url: 'prefijosServerManual5.php', //indicamos la ruta donde se genera la hora
-                dataType: 'text',//indicamos que es de tipo texto plano
-                async: false     //ponemos el parámetro asyn a falso
-        }).responseText;
-
-        //actualizamos el div que nos mostrará la hora actual
-        document.getElementById("Manual_5").innerHTML =time2;
-    }
-
-////////////////////////////////////////////////////////////////////////////
-function prefijoAutomaticol6() {
-
-        //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
-
-        var time2 = $.ajax({
-
-            url: 'prefijosServerAuto6.php', //indicamos la ruta donde se genera la hora
-                dataType: 'text',//indicamos que es de tipo texto plano
-                async: false     //ponemos el parámetro asyn a falso
-        }).responseText;
-
-        //actualizamos el div que nos mostrará la hora actual
-        document.getElementById("auto_6").innerHTML =time2;
-    }
-	
  function prefijoManual6() {
 
         //GUARDAMOS EN UNA VARIABLE EL RESULTADO DE LA CONSULTA AJAX    
@@ -95,7 +71,7 @@ function prefijoAutomaticol6() {
         //actualizamos el div que nos mostrará la hora actual
         document.getElementById("Manual_6").innerHTML =time2;
     }
-
+/*
 ///////////////////////////////////////////////////////////////////////////
 function prefijoAutomaticol8() {
 
@@ -876,7 +852,7 @@ function prefijoAutomatico44() {
 
         //actualizamos el div que nos mostrará la hora actual
         document.getElementById("Manual_46").innerHTML =time2;
-    }
+    }*/
 $(document).ready(function(){
 
 
@@ -973,21 +949,20 @@ $(document).ready(function(){
 </script>
 
 
-  <center><h2>PREFIJOS VICIDIAL HSBC</h2></center>
-   <!--<div class="panel panel-default">
-    <div class="panel-heading">Prefijos de Carrier Configurados:</div>
-    <button type="button" class="btn btn-success">MCM </button>
-     <button type="button" class="btn btn-info">Marcatel</button>
-      <button type="button" class="btn btn-warning">DIRECTO </button>
-   
- 
-   <div class="panel-body">CARRIER MARCATEL:</div>
-       <button type="button" class="btn btn-info">Marcatel Local 7</button>
-       <button type="button" class="btn btn-info">Marcatel Raptor 777</button>
-    <div class="panel-footer">CARRIER DIRECTO:</div>
-     <button type="button" class="btn btn-warning">DIRECTO 222 </button>
-     <button type="button" class="btn btn-warning">DIRECTO 210 </button>
-       <button type="button" class="btn btn-warning">DIRECTO 888</button>-->
+<center><h5>PREFIJOS VICIDIAL HSBC</h5></center>
+<div class="container">
+    <section class="row justify-content-start">
+        <div class="col-4">Carrier</div>
+        <div class="col-2">Directo</div>
+        <div class="col-2">IPCOM</div>
+        <div class="col-2">Marcatel</div>
+        <div class="col-2">MCM</div>        
+    </section>
+    
+</div>
+
+
+
 
 <table class="table table-dark">
 	<thead>
